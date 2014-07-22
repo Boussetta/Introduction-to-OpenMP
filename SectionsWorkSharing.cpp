@@ -7,6 +7,11 @@
 * AUTHOR: Blaise Barney  5/99
 * LAST REVISED: 07/16/07
 ******************************************************************************/
+
+#include "Config.h"
+
+#if (SECTION_WORK_SHARING > 0)
+
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -63,3 +68,4 @@ for (i=0; i<N; i++) {
   }  /* end of parallel section */
 
 }
+#endif

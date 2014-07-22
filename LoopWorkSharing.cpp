@@ -4,6 +4,11 @@
  *   across the team of threads.  A thread will perform CHUNK iterations
  *   at a time before being scheduled for the next CHUNK of work.
  ******************************************************************************/
+
+#include "Config.h"
+
+#if (LOOP_WORK_SHARING > 0)
+
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,4 +42,4 @@ int main(int argc, char *argv[]) {
 	} /* end of parallel section */
 
 }
-
+#endif

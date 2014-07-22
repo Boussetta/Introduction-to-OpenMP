@@ -6,6 +6,10 @@
  *   library routines are used to obtain the number of threads and each
  *   thread's number.
  ******************************************************************************/
+
+#include "Config.h"
+
+#if (HELLO_OPEN_MP > 0)
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,4 +34,4 @@ int main(int argc, char *argv[]) {
 	} /* All threads join master thread and disband */
 
 }
-
+#endif
